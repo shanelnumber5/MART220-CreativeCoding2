@@ -1,2 +1,2 @@
-# MART220-CreativeCoding2
-Repository for my Creative Coding 2 homework.
+# MART462-MobileGameProgramming
+ Repository for my Mobile Game Programming homework.
