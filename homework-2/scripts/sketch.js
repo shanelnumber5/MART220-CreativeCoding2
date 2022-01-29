@@ -11,7 +11,7 @@ var RIGHT_ARROW = 39;
 
 // x and y for the students
 var studentShapeX = 0;
-var studentShapeY = 100;
+var studentShapeY = 0;
 
 var studentShapeXs = [];
 var studentShapeYs = [];
@@ -56,6 +56,7 @@ function setup() {
 
     // teacher placement
     createTeacher(50, 50);
+
 }
 
 function draw() {
@@ -91,7 +92,7 @@ function draw() {
 
     // get a random speed when it first starts for students
     for (var i = 0; i < 10; i++) {
-        studentShapeXs[i] = getRandomNumber(1000);
+        studentShapeXs[i] = getRandomNumber(1150);
         studentShapeYs[i] = getRandomNumber(750);
         studentDiameters[i] = getRandomNumber(20);
     }
@@ -104,13 +105,14 @@ function draw() {
     if (studentShapeX >= 1200) {
         studentShapeXSpeeds = random(1, 10);
         studentShapeXSpeeds = -studentShapeXSpeeds;
-    } else if (studentShapeX < 0) {
+    } else if (studentShapeX <= 0) {
         studentShapeXSpeeds = random(1, 10);
 
-    } else if (studentShapeY >= 800) {
+    }
+    if (studentShapeY >= 800) {
         studentShapeYSpeeds = random(1, 10);
         studentShapeYSpeeds = -studentShapeYSpeeds;
-    } else if (studentShapeY < 0) {
+    } else if (studentShapeY <= 0) {
         studentShapeYSpeeds = random(1, 10);
 
     }
