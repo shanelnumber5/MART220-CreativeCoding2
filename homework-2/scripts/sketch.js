@@ -120,7 +120,7 @@ function draw() {
     studentShapeX = studentShapeX + studentShapeXSpeeds;
     studentShapeY = studentShapeY + studentShapeYSpeeds;
 
-    // createTeacher(100,100);
+    // createTeacher(100,100)
     drawTeacher();
     teacherMovement();
 
