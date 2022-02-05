@@ -130,6 +130,9 @@ var redColor11, greenColor11, blueColor11;
 // random text color 
 var redColor12, greenColor12, blueColor12;
 
+// timer text color 
+var redColor13, greenColor13, blueColor13;
+
 // decorative images
 let playground;
 let court;
@@ -147,11 +150,11 @@ function draw() {
     background(123, 171, 91);
     strokeWeight(5);
 
-    image(img, 500, height/4, img.width /10, img.height / 10);
+    image(img, 500, height/4, img.width / 10, img.height / 10);
     
-    image(img3, 1350, height/3, img3.width /8, img3.height /7);
+    image(img3, 1350, height/3, img3.width / 8, img3.height / 7);
 
-    image(img2, 750, height/2, img2.width /5, img2.height /4);
+    image(img2, 750, height/2, img2.width / 5, img2.height / 4);
 
     // call createBorders function
     createBorders(50);
@@ -168,12 +171,14 @@ function draw() {
         rect(width - 10, 0, 10, height - 100);
     }
 
-    // timer
+// timer
+fill(redColor1, greenColor1, blueColor1);
+textSize(80);
 if (timerValue >= 10) {
-    text("0:" + timerValue, width / 2, height / 2 + 19);
+    text("0:" + timerValue, width / 2, innerHeight + 145);
 }
 if (timerValue < 10) {
-    text('0:0' + timerValue, width / 2, height / 2 + 19);
+    text('0:0' + timerValue, width / 2, innerHeight + 145);
 }
 if (timerValue == 0) {
     text('Game Over', width / 2, height / 2 + 19);
@@ -181,7 +186,7 @@ if (timerValue == 0) {
 
     // text 
     textSize(30);
-    fill(redColor12, greenColor12, blueColor12);
+    fill(redColor13, greenColor13, blueColor13);
     textFont(myFont);
     text("Shanel Locke", innerWidth - 165, innerHeight + 145);
     textSize(60);
@@ -457,7 +462,7 @@ teacherMovement();
         stroke(5);
         textSize(50);
         fill(redColor12, greenColor12, blueColor12);
-        text("You Saved", width / 2 + 200, height / 2 + 155);
+        text("You Saved", width / 2 + 150, height / 2 + 155);
         text("All the Students!", width / 2 + 150, height / 2 + 205);
     }
 }

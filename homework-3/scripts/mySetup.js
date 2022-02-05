@@ -9,6 +9,10 @@ function preload(){
 
 function setup() {
     createCanvas(displayWidth, displayHeight);
+
+    // timer
+    textAlign(CENTER);
+    setInterval(timeIt, 1000);
     
     // back button
     button = createButton("Back");
@@ -45,6 +49,8 @@ function setup() {
     redColor11 = random(255), greenColor11 = random(255), blueColor11 = random(255);
 
     redColor12 = random(255), greenColor12 = random(255), blueColor12 = random(255);
+
+    redColor13 = random(255), greenColor13 = random(255), blueColor13 = random(255);
 
     // teacher placement
     createTeacher(50, 100);
@@ -159,8 +165,4 @@ function setup() {
         diameters10[i] = getRandomNumber(20);
     }
 }
-
-    // timer
-    textAlign(CENTER);
-    setInterval(timeIt, 1000);
 
