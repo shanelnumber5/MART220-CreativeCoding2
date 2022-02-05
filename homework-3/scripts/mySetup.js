@@ -1,15 +1,25 @@
+function preload(){
+    img = loadImage('assets/playground.png')
+    img2 = loadImage('assets/court.png')
+    img3 = loadImage('assets/swings.png')
+
+    myFont = loadFont('assets/Festive-Regular.ttf')
+    myFont2 = loadFont('assets/Schoolbell-Regular.ttf')
+}
+
 function setup() {
     createCanvas(displayWidth, displayHeight);
-
+    
     // back button
     button = createButton("Back");
     button.size(200, 100);
-    button.position(innerWidth - 900, innerHeight + 200);
+    button.position(innerWidth - 900, innerHeight + 180);
     button.style("font-family", "Bodoni");
     button.style("font-size", "48px");
     button = createImg('assets/meme.png');
     button.size(100, 100);
-    button.position(innerWidth - 1000, innerHeight + 200);
+    button.position(innerWidth - 1000, innerHeight + 180);
+    
 
     // random colors
     redColor1 = random(255), greenColor1 = random(255), blueColor1 = random(255);
@@ -40,7 +50,6 @@ function setup() {
     createTeacher(50, 100);
 
     // student 1 placement
-    student1[i] = img1;
     studentXSpeeds1 = random(1, 10);
     studentYSpeeds1 = random(1, 10);
 
@@ -150,3 +159,8 @@ function setup() {
         diameters10[i] = getRandomNumber(20);
     }
 }
+
+    // timer
+    textAlign(CENTER);
+    setInterval(timeIt, 1000);
+

@@ -14,6 +14,7 @@ var studentX = 0,
     studentY = 0;
 
 // student 1 variables
+var student1 = [];
 var studentXs1 = [];
 var studentYs1 = [];
 var diameters1 = [];
@@ -93,9 +94,6 @@ var diameters10 = [];
 var studentXSpeeds10 = 0;
 var studentYSpeeds10 = 0;
 
-// studnet images
-var student1 = [];
-
 // random student color 
 var redColor1, greenColor1, blueColor1;
 
@@ -132,15 +130,32 @@ var redColor11, greenColor11, blueColor11;
 // random text color 
 var redColor12, greenColor12, blueColor12;
 
-function preload() {
-    img1 = loadImage('assets/student1.png')
-}
+// decorative images
+let playground;
+let court;
+let swings;
+
+// fonts
+let myFont;
+let myFont2;
+
+// timer
+var timerValue = 10;
+var startButton;
 
 function draw() {
     background(123, 171, 91);
     strokeWeight(5);
 
+    image(img, 500, height/4, img.width /10, img.height / 10);
+    
+    image(img3, 1350, height/3, img3.width /8, img3.height /7);
 
+    image(img2, 750, height/2, img2.width /5, img2.height /4);
+
+    // call createBorders function
+    createBorders(50);
+    
     function createBorders(thickness) {
         fill(173, 166, 147);
         // top border
@@ -153,24 +168,34 @@ function draw() {
         rect(width - 10, 0, 10, height - 100);
     }
 
-    // text 
-    textSize(20);
-    fill(redColor12, greenColor12, blueColor12);
-    textFont('Cursive');
-    text("Shanel Locke", innerWidth - 100, innerHeight + 175);
-    textSize(40);
-    textFont('Georgia');
-    text("The Teacher - Recess Duty", innerWidth - 1820, innerHeight - 770);
+    // timer
+if (timerValue >= 10) {
+    text("0:" + timerValue, width / 2, height / 2 + 19);
+}
+if (timerValue < 10) {
+    text('0:0' + timerValue, width / 2, height / 2 + 19);
+}
+if (timerValue == 0) {
+    text('Game Over', width / 2, height / 2 + 19);
+}
 
-    // call createBorders function
-    createBorders(50);
+    // text 
+    textSize(30);
+    fill(redColor12, greenColor12, blueColor12);
+    textFont(myFont);
+    text("Shanel Locke", innerWidth - 165, innerHeight + 145);
+    textSize(60);
+    textFont(myFont2);
+    text("The Teacher - Recess Duty", innerWidth - 1420, innerHeight - 770);
+    
 
     // student color 1
+    strokeWeight(1);
     fill(redColor1, greenColor1, blueColor1);
 
     // draw student 1
     for (var i = 0; i < studentXs1.length; i++) {
-        image(student1[i], studentXs1[i], studentYs1[i]);
+        circle(studentXs1[i], studentYs1[i], diameters1[i]);
     }
     for (var i = 0; i < 1; i++) {
         if (studentXs1[i] >= width) {
@@ -422,9 +447,10 @@ function draw() {
         studentYs10[i] = studentYs10[i] + studentYSpeeds10;
     }
 
-    // createTeacher(100,100)
-    drawTeacher();
-    teacherMovement();
+// createTeacher(100,100)
+drawTeacher();
+teacherMovement();
+    
 
     // check to see if the teacher has left the exit
     if (teacherX > width && teacherY > height - 100) {
@@ -435,6 +461,7 @@ function draw() {
         text("All the Students!", width / 2 + 150, height / 2 + 205);
     }
 }
+
 
 function teacherMovement() {
     // handle the keys
@@ -458,6 +485,11 @@ function createTeacher(x, y) {
     teacherY = y;
 }
 
+function timeIt() {
+    if (timerValue > 0) 
+        timerValue--;
+}
+
 // teacher demographics
 function drawTeacher() {
     fill(redColor11, greenColor11, blueColor11);
@@ -469,3 +501,8 @@ function drawTeacher() {
 function getRandomNumber(number) {
     return Math.floor(Math.random() * number) + 10;
 }
+
+
+
+
+
