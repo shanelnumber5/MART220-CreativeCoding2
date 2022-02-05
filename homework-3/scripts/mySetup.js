@@ -40,6 +40,7 @@ function setup() {
     createTeacher(50, 100);
 
     // student 1 placement
+    student1[i] = img1;
     studentXSpeeds1 = random(1, 10);
     studentYSpeeds1 = random(1, 10);
 

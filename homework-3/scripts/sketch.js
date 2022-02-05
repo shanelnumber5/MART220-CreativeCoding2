@@ -93,6 +93,9 @@ var diameters10 = [];
 var studentXSpeeds10 = 0;
 var studentYSpeeds10 = 0;
 
+// studnet images
+var student1 = [];
+
 // random student color 
 var redColor1, greenColor1, blueColor1;
 
@@ -129,6 +132,10 @@ var redColor11, greenColor11, blueColor11;
 // random text color 
 var redColor12, greenColor12, blueColor12;
 
+function preload() {
+    img1 = loadImage('assets/student1.jpg')
+}
+
 function draw() {
     background(123, 171, 91);
     strokeWeight(5);
@@ -159,12 +166,11 @@ function draw() {
     createBorders(50);
 
     // student color 1
-    strokeWeight(1);
     fill(redColor1, greenColor1, blueColor1);
 
     // draw student 1
     for (var i = 0; i < studentXs1.length; i++) {
-        circle(studentXs1[i], studentYs1[i], diameters1[i]);
+        image(student1[i], studentXs1[i], studentYs1[i]);
     }
     for (var i = 0; i < 1; i++) {
         if (studentXs1[i] >= width) {
