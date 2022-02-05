@@ -133,7 +133,7 @@ var redColor11, greenColor11, blueColor11;
 var redColor12, greenColor12, blueColor12;
 
 function preload() {
-    img1 = loadImage('assets/student1.jpg')
+    img1 = loadImage('assets/student1.png')
 }
 
 function draw() {
