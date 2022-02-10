@@ -1,7 +1,7 @@
 function preload(){
-    img = loadImage('assets/playground.png')
-    img2 = loadImage('assets/court.png')
-    img3 = loadImage('assets/swings.png')
+    playground = loadImage('assets/playground.png')
+    court = loadImage('assets/court.png')
+    swings = loadImage('assets/swings.png')
 
     myFont = loadFont('assets/Festive-Regular.ttf')
     myFont2 = loadFont('assets/Schoolbell-Regular.ttf')

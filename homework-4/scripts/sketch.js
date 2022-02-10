@@ -127,10 +127,10 @@ var redColor10, greenColor10, blueColor10;
 // random teacher color 
 var redColor11, greenColor11, blueColor11;
 
-// random text color 
+// timer and instructions text color 
 var redColor12, greenColor12, blueColor12;
 
-// timer text color 
+// random text color 
 var redColor13, greenColor13, blueColor13;
 
 // decorative images
@@ -154,11 +154,11 @@ function draw() {
     background(123, 171, 91);
     strokeWeight(5);
 
-    image(img, 500, height/4, img.width / 10, img.height / 10);
+    image(playground, 500, height/4, playground.width / 10, playground.height / 10);
     
-    image(img3, 1350, height/3, img3.width / 8, img3.height / 7);
+    image(swings, 1350, height/3, swings.width / 8, swings.height / 7);
 
-    image(img2, 750, height/2, img2.width / 5, img2.height / 4);
+    image(court, 750, height/2, court.width / 5, court.height / 4);
 
     // call createBorders function
     createBorders(50);
@@ -198,6 +198,10 @@ else if (timerValue >= 60) {
     textSize(60);
     textFont(myFont2);
     text("The Teacher - Recess Duty", width / 2 - 490 , height / 2 - 420);
+    textSize(40);
+    textFont(myFont2);
+    fill(redColor12, greenColor12, blueColor12);
+    text("(You Have 60 Seconds to Collect All the Students)", width / 2 + 470 , height / 2 - 420);
     
 
     // student color 1
