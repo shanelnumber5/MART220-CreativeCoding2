@@ -2,9 +2,64 @@ function preload(){
     playground = loadImage('assets/playground.png')
     court = loadImage('assets/court.png')
     swings = loadImage('assets/swings.png')
+    grass = loadImage('assets/grass.jpg')
 
     myFont = loadFont('assets/Festive-Regular.ttf')
     myFont2 = loadFont('assets/Schoolbell-Regular.ttf')
+
+     // CHALLENGE - can you make it so we don't have to copy and paste all this?
+    
+    // Bring in all the assets from our folder
+    // and create all our objects
+    cowgirl = new imageclass('assets/Idle (1).png', 0, 0);
+    cowGirlObjects[0] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (2).png', 0, 0);
+    cowGirlObjects[1] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (3).png', 0, 0);
+    cowGirlObjects[2] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (4).png', 0, 0);
+    cowGirlObjects[3] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (5).png', 0, 0);
+    cowGirlObjects[4] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (6).png', 0, 0);
+    cowGirlObjects[5] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (7).png', 0, 0);
+    cowGirlObjects[6] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (8).png', 0, 0);
+    cowGirlObjects[7] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (9).png', 0, 0);
+    cowGirlObjects[8] = cowgirl;
+    cowgirl = new imageclass('assets/Idle (10).png', 0, 0);
+    cowGirlObjects[9] = cowgirl;
+
+    // Bring in all the run assets from our folder
+    // and create all our objects
+    cowgirl = new imageclass('assets/Run (1).png', 0, 0);
+    cowGirlRunObjects[0] = cowgirl;
+    cowgirl = new imageclass('assets/Run (2).png', 0, 0);
+    cowGirlRunObjects[1] = cowgirl;
+    cowgirl = new imageclass('assets/Run (3).png', 0, 0);
+    cowGirlRunObjects[2] = cowgirl;
+    cowgirl = new imageclass('assets/Run (4).png', 0, 0);
+    cowGirlRunObjects[3] = cowgirl;
+    cowgirl = new imageclass('assets/Run (5).png', 0, 0);
+    cowGirlRunObjects[4] = cowgirl;
+    cowgirl = new imageclass('assets/Run (6).png', 0, 0);
+    cowGirlRunObjects[5] = cowgirl;
+    cowgirl = new imageclass('assets/Run (7).png', 0, 0);
+    cowGirlRunObjects[6] = cowgirl;
+    cowgirl = new imageclass('assets/Run (8).png', 0, 0);
+    cowGirlRunObjects[7] = cowgirl;
+
+    for (var i = 0; i < cowGirlObjects.length; i++) {
+        animation[i] = cowGirlObjects[i].getImage();
+        
+    }
+
+    for(var i = 0; i < cowGirlRunObjects.length; i++)
+    {
+        runanimation[i] = cowGirlRunObjects[i].getImage();
+    }
 }
 
 function setup() {
@@ -61,9 +116,9 @@ function setup() {
 
     // get a random speed when it first starts for student 1
     for (var i = 0; i < 1; i++) {
-        studentXs2[i] = getRandomNumber(1150);
-        studentYs2[i] = getRandomNumber(750);
-        diameters2[i] = getRandomNumber(20);
+        studentXs1[i] = getRandomNumber(1150);
+        studentYs1[i] = getRandomNumber(750);
+        diameters1[i] = getRandomNumber(20);
     }
 
     // student 2 placement
@@ -165,4 +220,5 @@ function setup() {
         diameters10[i] = getRandomNumber(20);
     }
 }
+
 
