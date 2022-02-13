@@ -16,23 +16,7 @@ function draw() {
     fill(redColor12, greenColor12, blueColor12);
     text("(You Have 60 Seconds to Collect All the Students)", width / 2 + 470, height / 2 - 420);
 
-    if (keyIsPressed) {
-        if (key == "d") {
-            // continue to display the image
-            image(runanimation[j], cowGirlRunObjects[j].getX(), cowGirlRunObjects[j].getY());
-            // this section slows the running down
-            counter++;
-            if (counter > 5) {
-                // increment the index "j"
-                incrementRunIndex();
-                // restart our counter
-                counter = 0;
-            }
-        }
-    } else {
-        image(animation[i], cowGirlObjects[i].getX(), cowGirlObjects[i].getY());
-    }
-
+    image(animation[i], cowGirlObjects[i].getX(), cowGirlObjects[i].getY());
 
     image(playground, 500, height / 4, playground.width / 10, playground.height / 10);
 
@@ -54,31 +38,16 @@ function draw() {
     }
 }
 
-incrementIndex(); { // need to increment the s variable
-
-    // increment the index
-    s += 1;
-
-    // if we reach the end of the array, start over
-    if (s >= animation.length) {
-        s = 0;
-    }
-
-    // createTeacher(100,100)
-    drawTeacher();
-    teacherMovement();
-
-
-    // check to see if the teacher has left the exit
-    if (teacherX > width && teacherY > height - 100) {
-        stroke(5);
-        textSize(50);
-        fill(redColor12, greenColor12, blueColor12);
-        textAlign(CENTER);
-        text("You Saved", width / 2 + 200, height / 2 + 200);
-        text("All the Students!", width / 2 + 200, height / 2 + 250);
-    }
+// check to see if the teacher has left the exit
+if (teacherX > width && teacherY > height - 100) {
+    stroke(5);
+    textSize(50);
+    fill(redColor12, greenColor12, blueColor12);
+    textAlign(CENTER);
+    text("You Saved", width / 2 + 200, height / 2 + 200);
+    text("All the Students!", width / 2 + 200, height / 2 + 250);
 }
+
 
 // student color 1
 strokeWeight(1);
@@ -336,4 +305,19 @@ for (var i = 0; i < 1; i++) {
     }
     studentXs10[i] = studentXs10[i] + studentXSpeeds10;
     studentYs10[i] = studentYs10[i] + studentYSpeeds10;
+}
+
+function incrementIndex() { // need to increment the s variable
+
+    // increment the index
+    s += 1;
+
+    // if we reach the end of the array, start over
+    if (s >= animation.length) {
+        s = 0;
+    }
+
+    // createTeacher(100,100)
+    drawTeacher();
+    teacherMovement();
 }

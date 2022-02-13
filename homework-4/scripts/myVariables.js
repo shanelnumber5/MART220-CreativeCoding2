@@ -142,18 +142,15 @@ let grass;
 let myFont;
 let myFont2;
 
+var createBorders = 50;
+
 // timer
 var timerValue = 0;
 var startButton;
 
-// borders
-var createBorders = [];
-
 var cowgirl;
 var animation = [];
-var runanimation = [];
 var cowGirlObjects = [];
-var cowGirlRunObjects = [];
 var i = 0;
 var j = 0;
 var k = 0;

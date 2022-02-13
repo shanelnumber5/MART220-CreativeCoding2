@@ -30,32 +30,9 @@ function preload() {
     cowgirl = new imageclass('assets/Idle (10).png', 0, 0);
     cowGirlObjects[9] = cowgirl;
 
-    // Bring in all the run assets from our folder
-    // and create all our objects
-    cowgirl = new imageclass('assets/Run (1).png', 0, 0);
-    cowGirlRunObjects[0] = cowgirl;
-    cowgirl = new imageclass('assets/Run (2).png', 0, 0);
-    cowGirlRunObjects[1] = cowgirl;
-    cowgirl = new imageclass('assets/Run (3).png', 0, 0);
-    cowGirlRunObjects[2] = cowgirl;
-    cowgirl = new imageclass('assets/Run (4).png', 0, 0);
-    cowGirlRunObjects[3] = cowgirl;
-    cowgirl = new imageclass('assets/Run (5).png', 0, 0);
-    cowGirlRunObjects[4] = cowgirl;
-    cowgirl = new imageclass('assets/Run (6).png', 0, 0);
-    cowGirlRunObjects[5] = cowgirl;
-    cowgirl = new imageclass('assets/Run (7).png', 0, 0);
-    cowGirlRunObjects[6] = cowgirl;
-    cowgirl = new imageclass('assets/Run (8).png', 0, 0);
-    cowGirlRunObjects[7] = cowgirl;
-
     for (var i = 0; i < cowGirlObjects.length; i++) {
         animation[i] = cowGirlObjects[i].getImage();
 
-    }
-
-    for (var i = 0; i < cowGirlRunObjects.length; i++) {
-        runanimation[i] = cowGirlRunObjects[i].getImage();
     }
 }
 
@@ -68,6 +45,7 @@ function setup() {
     // timer
     textAlign(CENTER);
     setInterval(timeIt, 1000);
+    setInterval(incrementIndex, 50);
 
     // back button
     button = createButton("Back");
