@@ -1,4 +1,4 @@
-function preload(){
+function preload() {
     playground = loadImage('assets/playground.png')
     court = loadImage('assets/court.png')
     swings = loadImage('assets/swings.png')
@@ -6,7 +6,7 @@ function preload(){
 
     myFont = loadFont('assets/Festive-Regular.ttf')
     myFont2 = loadFont('assets/Schoolbell-Regular.ttf')
-    
+
     // Bring in all the assets from our folder
     // and create all our objects
     cowgirl = new imageclass('assets/Idle (1).png', 0, 0);
@@ -51,11 +51,10 @@ function preload(){
 
     for (var i = 0; i < cowGirlObjects.length; i++) {
         animation[i] = cowGirlObjects[i].getImage();
-        
+
     }
 
-    for(var i = 0; i < cowGirlRunObjects.length; i++)
-    {
+    for (var i = 0; i < cowGirlRunObjects.length; i++) {
         runanimation[i] = cowGirlRunObjects[i].getImage();
     }
 }
@@ -65,11 +64,11 @@ function setup() {
 
     // teacher placement
     createTeacher(50, 100);
-    
+
     // timer
     textAlign(CENTER);
     setInterval(timeIt, 1000);
-    
+
     // back button
     button = createButton("Back");
     button.size(200, 100);
@@ -79,7 +78,7 @@ function setup() {
     button = createImg('assets/meme.png');
     button.size(100, 100);
     button.position(width / 2 - 70, height / 2 + 470);
-    
+
 
     // random colors
     redColor1 = random(255), greenColor1 = random(255), blueColor1 = random(255);

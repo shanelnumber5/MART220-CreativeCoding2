@@ -160,5 +160,3 @@ var k = 0;
 var x = 0;
 var s = 0; // this variable is for the idle animation
 var counter = 0;
-
-

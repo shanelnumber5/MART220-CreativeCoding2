@@ -1,23 +1,19 @@
-class imageclass{
+class imageclass {
 
-    constructor(path, x, y)
-    {
+    constructor(path, x, y) {
         this.path = path;
         this.x = x;
         this.y = y;
     }
 
-    getImage()
-    {
+    getImage() {
         var myImage = loadImage(this.path);
         return myImage;
     }
-    getX()
-    {
+    getX() {
         return this.x;
     }
-    getY()
-    {
+    getY() {
         return this.y;
     }
 }

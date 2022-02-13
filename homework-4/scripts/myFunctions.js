@@ -18,14 +18,14 @@ function createBorders(thickness) {
     rect(width - 10, 0, 10, height - 100);
 }
 
-function incrementRunIndex(){
+function incrementRunIndex() {
     // increment the index
     j += 1;
 
     // if we reach the end of the array, start over
-    if (j >= runanimation.length) 
+    if (j >= runanimation.length)
         j = 0;
-    }  
+}
 
 function createTeacher(x, y) {
     teacherX = x;
