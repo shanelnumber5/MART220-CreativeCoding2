@@ -146,6 +146,9 @@ let myFont2;
 var timerValue = 0;
 var startButton;
 
+// borders
+var createBorders = [];
+
 var cowgirl;
 var animation = [];
 var runanimation = [];
@@ -155,9 +158,7 @@ var i = 0;
 var j = 0;
 var k = 0;
 var x = 0;
+var s = 0; // this variable is for the idle animation
 var counter = 0;
 
-function windowResized() {
-    resizeCanvas(windowWidth - 40, windowHeight - 40);
-}
 

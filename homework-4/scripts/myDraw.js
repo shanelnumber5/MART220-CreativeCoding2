@@ -1,43 +1,7 @@
 function draw() {
     background(grass);
     strokeWeight(5);
-
-    image(playground, 500, height/4, playground.width / 10, playground.height / 10);
-    
-    image(swings, 1350, height/3, swings.width / 8, swings.height / 7);
-
-    image(court, 750, height/2, court.width / 5, court.height / 4);
-
-    // call createBorders function
-    createBorders(50);
-    
-    function createBorders(thickness) {
-        fill(173, 166, 147);
-        // top border
-        rect(0, 0, width, thickness);
-        // bottom border
-        rect(0, height - 20, width, thickness);
-        // left border
-        rect(0, 0, 10, height);
-        // right upper border
-        rect(width - 10, 0, 10, height - 100);
-    }
-    
-
-// timer
-fill(redColor1, greenColor1, blueColor1);
-textSize(80);
-
-if (timerValue < 10) {
-    text('0:0' + timerValue, width / 2, height / 2 + 450);
-
-}else if (timerValue >= 10 && timerValue < 60) {
-    text("0:" + timerValue, width / 2, height / 2 + 450);
-}
-
-else if (timerValue >= 60) {
-    text('Game Over', width / 2, height / 2 + 450);
-}
+    createBorders();
 
     // text 
     textSize(30);
@@ -52,7 +16,79 @@ else if (timerValue >= 60) {
     fill(redColor12, greenColor12, blueColor12);
     text("(You Have 60 Seconds to Collect All the Students)", width / 2 + 470 , height / 2 - 420);
 
-    // student color 1
+        if(keyIsPressed)
+        {
+            if(key == "d")
+            {
+            // continue to display the image
+                image(runanimation[j], cowGirlRunObjects[j].getX(), cowGirlRunObjects[j].getY());
+          // this section slows the running down
+                counter++;
+                if(counter > 5)
+                {
+              // increment the index "j"
+                incrementRunIndex();
+              // restart our counter
+                counter = 0;
+                }   
+            }
+        }
+        else
+        {
+            image(animation[i], cowGirlObjects[i].getX(), cowGirlObjects[i].getY());
+        }
+
+         
+    image(playground, 500, height/4, playground.width / 10, playground.height / 10);
+    
+    image(swings, 1350, height/3, swings.width / 8, swings.height / 7);
+
+    image(court, 750, height/2, court.width / 5, court.height / 4);     
+    
+    
+    // timer
+    fill(redColor1, greenColor1, blueColor1);
+    textSize(80);
+
+    if (timerValue < 10) {
+        text('0:0' + timerValue, width / 2, height / 2 + 450);
+        }   
+            else if (timerValue >= 10 && timerValue < 60) {
+            text("0:" + timerValue, width / 2, height / 2 + 450);
+        }
+
+            else if (timerValue >= 60) {
+            text('Game Over', width / 2, height / 2 + 450);
+        }
+}
+
+    incrementIndex();{// need to increment the s variable
+  
+     // increment the index
+     s += 1;
+
+     // if we reach the end of the array, start over
+     if (s >= animation.length) {
+         s = 0;
+    }
+
+    // createTeacher(100,100)
+    drawTeacher();
+    teacherMovement();
+    
+
+    // check to see if the teacher has left the exit
+    if (teacherX > width && teacherY > height - 100) {
+        stroke(5);
+        textSize(50);
+        fill(redColor12, greenColor12, blueColor12);
+        textAlign(CENTER);
+        text("You Saved", width / 2 + 200, height / 2 + 200);
+        text("All the Students!", width / 2 + 200, height / 2 + 250);
+    }
+}
+
+// student color 1
     strokeWeight(1);
     fill(redColor1, greenColor1, blueColor1);
 
@@ -309,109 +345,5 @@ else if (timerValue >= 60) {
         studentXs10[i] = studentXs10[i] + studentXSpeeds10;
         studentYs10[i] = studentYs10[i] + studentYSpeeds10;
     }
-
-// createTeacher(100,100)
-drawTeacher();
-teacherMovement();
     
 
-    // check to see if the teacher has left the exit
-    if (teacherX > width && teacherY > height - 100) {
-        stroke(5);
-        textSize(50);
-        fill(redColor12, greenColor12, blueColor12);
-        textAlign(CENTER);
-        text("You Saved", width / 2 + 200, height / 2 + 200);
-        text("All the Students!", width / 2 + 200, height / 2 + 250);
-    }
-}
-
-
-function teacherMovement() {
-    // handle the keys
-    if (keyIsDown(UP_ARROW)) {
-        teacherY -= 10;
-    }
-    if (keyIsDown(DOWN_ARROW)) {
-        teacherY += 10;
-    }
-    if (keyIsDown(LEFT_ARROW)) {
-        teacherX -= 10;
-        console.log("movement: " + teacherX);
-    }
-    if (keyIsDown(RIGHT_ARROW)) {
-        teacherX += 10;
-    }
-}
-
-function createTeacher(x, y) {
-    teacherX = x;
-    teacherY = y;
-}
-
-
-function timeIt() {
-        timerValue++;
-}
-
-// teacher demographics
-function drawTeacher() {
-    fill(redColor11, greenColor11, blueColor11);
-    stroke(1);
-    rect(teacherX, teacherY, 50, 50);
-}
-
-// student sizes
-function getRandomNumber(number) {
-    return Math.floor(Math.random() * number) + 10;
-}
-
-  // draw each frame based on the index in the array
-  if(keyIsPressed)
-  {
-      if(key == "d")
-      {
-          // continue to display the image
-          image(runanimation[j], cowGirlRunObjects[j].getX(), cowGirlRunObjects[j].getY());
-          // this section slows the running down
-          counter++;
-          if(counter > 5)
-          {
-              // increment the index "j"
-              incrementRunIndex();
-              // restart our counter
-              counter = 0;
-          }   
-      }
-  }
-  else
-  {
-      image(animation[i], cowGirlObjects[i].getX(), cowGirlObjects[i].getY());
-  }
-
-
-function incrementIndex()
-{
-   // increment the index
-   i += 1;
-
-   // if we reach the end of the array, start over
-   if (i >= animation.length) {
-       i = 0;
-   }
-}
-
-function incrementRunIndex()
-{
-
-   // increment the index
-   j += 1;
-
-   // if we reach the end of the array, start over
-   if (j >= runanimation.length) {
-       j = 0;
-   }
-
-
-
-}

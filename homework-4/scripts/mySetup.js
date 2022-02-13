@@ -6,8 +6,6 @@ function preload(){
 
     myFont = loadFont('assets/Festive-Regular.ttf')
     myFont2 = loadFont('assets/Schoolbell-Regular.ttf')
-
-     // CHALLENGE - can you make it so we don't have to copy and paste all this?
     
     // Bring in all the assets from our folder
     // and create all our objects
@@ -65,6 +63,9 @@ function preload(){
 function setup() {
     createCanvas(displayWidth - 150, displayHeight - 140);
 
+    // teacher placement
+    createTeacher(50, 100);
+    
     // timer
     textAlign(CENTER);
     setInterval(timeIt, 1000);
@@ -106,9 +107,6 @@ function setup() {
     redColor12 = random(255), greenColor12 = random(255), blueColor12 = random(255);
 
     redColor13 = random(255), greenColor13 = random(255), blueColor13 = random(255);
-
-    // teacher placement
-    createTeacher(50, 100);
 
     // student 1 placement
     studentXSpeeds1 = random(1, 10);
@@ -220,5 +218,3 @@ function setup() {
         diameters10[i] = getRandomNumber(20);
     }
 }
-
-
