@@ -4,8 +4,8 @@ function preload() {
     swings = loadImage('assets/swings.png')
     grass = loadImage('assets/grass.jpg')
 
-    myFont = loadFont('assets/Festive-Regular.ttf')
-    myFont2 = loadFont('assets/Schoolbell-Regular.ttf')
+    myFont = loadFont('assets/fonts/Festive-Regular.ttf')
+    myFont2 = loadFont('assets/fonts/Schoolbell-Regular.ttf')
 
     // Bring in all the assets from our folder
     // and create all our objects

@@ -146,6 +146,7 @@ let myFont2;
 var timerValue = 0;
 var startButton;
 
+// animations
 var cowgirl;
 var animation = [];
 var cowGirlObjects = [];
@@ -153,6 +154,6 @@ var i = 0;
 var j = 0;
 var k = 0;
 var x = 0;
-var s = 0; // this variable is for the idle animation
+var s = 0; 
 var t = 0;
 var counter = 0;
