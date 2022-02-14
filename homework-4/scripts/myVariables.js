@@ -142,8 +142,6 @@ let grass;
 let myFont;
 let myFont2;
 
-var createBorders = 50;
-
 // timer
 var timerValue = 0;
 var startButton;

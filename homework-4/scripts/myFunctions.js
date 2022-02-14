@@ -67,10 +67,6 @@ function incrementIndex() { // need to increment the s variable
     if (s >= animation.length) {
         s = 0;
     }
-
-    // createTeacher(100,100)
-    drawTeacher();
-    teacherMovement();
 }
 
 // student sizes
