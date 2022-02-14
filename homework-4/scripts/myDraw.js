@@ -16,7 +16,7 @@ function draw() {
     fill(redColor12, greenColor12, blueColor12);
     text("(You Have 60 Seconds to Collect All the Students)", width / 2 + 470, height / 2 - 420);
 
-    image(animation[i], cowGirlObjects[i].getX(), cowGirlObjects[i].getY());
+    image(animation[s], cowGirlObjects[s].getX(), cowGirlObjects[s].getY());
 
     image(playground, 500, height / 4, playground.width / 10, playground.height / 10);
 
@@ -36,7 +36,7 @@ function draw() {
     } else if (timerValue >= 60) {
         text('Game Over', width / 2, height / 2 + 450);
     }
-}
+
 
 // check to see if the teacher has left the exit
 if (teacherX > width && teacherY > height - 100) {
@@ -306,18 +306,4 @@ for (var i = 0; i < 1; i++) {
     studentXs10[i] = studentXs10[i] + studentXSpeeds10;
     studentYs10[i] = studentYs10[i] + studentYSpeeds10;
 }
-
-function incrementIndex() { // need to increment the s variable
-
-    // increment the index
-    s += 1;
-
-    // if we reach the end of the array, start over
-    if (s >= animation.length) {
-        s = 0;
-    }
-
-    // createTeacher(100,100)
-    drawTeacher();
-    teacherMovement();
 }

@@ -58,6 +58,21 @@ function teacherMovement() {
     }
 }
 
+function incrementIndex() { // need to increment the s variable
+
+    // increment the index
+    s += 1;
+
+    // if we reach the end of the array, start over
+    if (s >= animation.length) {
+        s = 0;
+    }
+
+    // createTeacher(100,100)
+    drawTeacher();
+    teacherMovement();
+}
+
 // student sizes
 function getRandomNumber(number) {
     return Math.floor(Math.random() * number) + 10;

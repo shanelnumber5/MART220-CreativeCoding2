@@ -156,4 +156,5 @@ var j = 0;
 var k = 0;
 var x = 0;
 var s = 0; // this variable is for the idle animation
+var t = 0;
 var counter = 0;
