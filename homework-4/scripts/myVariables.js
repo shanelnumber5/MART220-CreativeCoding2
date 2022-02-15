@@ -135,7 +135,6 @@ var redColor13, greenColor13, blueColor13;
 // decorative images
 let playground;
 let court;
-let swings;
 let grass;
 
 // fonts
@@ -146,14 +145,10 @@ let myFont2;
 var timerValue = 0;
 var startButton;
 
-// animations
-var cowgirl;
-var animation = [];
-var cowGirlObjects = [];
-var i = 0;
-var j = 0;
-var k = 0;
-var x = 0;
-var s = 0; 
+// swings
+var swingset;
+var animation1 = [];
+var swingsetObjects = [];
+var s = 0;
 var t = 0;
-var counter = 0;
+var counter = 11;

@@ -7,31 +7,30 @@ function preload() {
     myFont = loadFont('assets/fonts/Festive-Regular.ttf')
     myFont2 = loadFont('assets/fonts/Schoolbell-Regular.ttf')
 
-    // Bring in all the assets from our folder
-    // and create all our objects
-    cowgirl = new imageclass('assets/Idle (1).png', 0, 0);
-    cowGirlObjects[0] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (2).png', 0, 0);
-    cowGirlObjects[1] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (3).png', 0, 0);
-    cowGirlObjects[2] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (4).png', 0, 0);
-    cowGirlObjects[3] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (5).png', 0, 0);
-    cowGirlObjects[4] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (6).png', 0, 0);
-    cowGirlObjects[5] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (7).png', 0, 0);
-    cowGirlObjects[6] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (8).png', 0, 0);
-    cowGirlObjects[7] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (9).png', 0, 0);
-    cowGirlObjects[8] = cowgirl;
-    cowgirl = new imageclass('assets/Idle (10).png', 0, 0);
-    cowGirlObjects[9] = cowgirl;
+    // swings
+    swingset = new imageSwings('assets/animations/swings/swings-1.png', 50, 50);
+    swingsetObjects[0] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-2.png', 50, 50);
+    swingsetObjects[1] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-3.png', 50, 50);
+    swingsetObjects[2] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-4.png', 50, 50);
+    swingsetObjects[3] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-5.png', 50, 50);
+    swingsetObjects[4] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-6.png', 50, 50);
+    swingsetObjects[5] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-7.png', 50, 50);
+    swingsetObjects[6] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-8.png', 50, 50);
+    swingsetObjects[7] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-9.png', 50, 50);
+    swingsetObjects[8] = swingset;
+    swingset = new imageSwings('assets/animations/swings/swings-10.png', 10, 10);
+    swingsetObjects[9] = swingset;
 
-    for (var i = 0; i < cowGirlObjects.length; i++) {
-        animation[i] = cowGirlObjects[i].getImage();
+    for (var i = 0; i < swingsetObjects.length; i++) {
+        animation1[i] = swingsetObjects[i].getImage();
 
     }
 }

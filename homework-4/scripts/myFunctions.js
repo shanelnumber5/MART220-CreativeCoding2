@@ -24,7 +24,7 @@ function incrementIndex() { // need to increment the s variable
     t += 1;
 
     // if we reach the end of the array, start over
-    if (t >= animation.length) {
+    if (t >= animation1.length) {
         t = 0;
     }
 }
@@ -64,8 +64,8 @@ function incrementIndex() { // need to increment the s variable
     s += 1;
 
     // if we reach the end of the array, start over
-    if (s >= animation.length) {
-        s = 0;
+    if (s >= animation1.length) {
+        s = 1;
     }
 }
 

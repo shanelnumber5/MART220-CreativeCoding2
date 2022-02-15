@@ -1,4 +1,4 @@
-class imageclass {
+class imageSwings {
 
     constructor(path, x, y) {
         this.path = path;

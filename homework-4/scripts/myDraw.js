@@ -2,11 +2,9 @@ function draw() {
     background(grass);
     strokeWeight(5);
 
-    image(animation[s], cowGirlObjects[s].getX(), cowGirlObjects[s].getY());
+    image(animation1[s], 1350, height / 3, swings.width / 8, swings.height / 7);
 
     image(playground, 500, height / 4, playground.width / 10, playground.height / 10);
-
-    image(swings, 1350, height / 3, swings.width / 8, swings.height / 7);
 
     image(court, 750, height / 2, court.width / 5, court.height / 4);
 
