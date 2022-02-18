@@ -7,26 +7,27 @@ function preload() {
     myFont2 = loadFont('./assets/fonts/Schoolbell-Regular.ttf')
 
     // swings
-    swingsetObjects[0] = swingset;
+
     swingset = new imageSwings('./assets/animations/swings/swings-1.png', 50, 50);
-    swingsetObjects[1] = swingset;
+    swingsetObjects[0] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-2.png', 50, 50);
-    swingsetObjects[2] = swingset;
+    swingsetObjects[1] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-3.png', 50, 50);
-    swingsetObjects[3] = swingset;
+    swingsetObjects[2] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-4.png', 50, 50);
-    swingsetObjects[4] = swingset;
+    swingsetObjects[3] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-5.png', 50, 50);
-    swingsetObjects[5] = swingset;
+    swingsetObjects[4] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-6.png', 50, 50);
-    swingsetObjects[6] = swingset;
+    swingsetObjects[5] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-7.png', 50, 50);
-    swingsetObjects[7] = swingset;
+    swingsetObjects[6] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-8.png', 50, 50);
-    swingsetObjects[8] = swingset;
+    swingsetObjects[7] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-9.png', 50, 50);
-    swingsetObjects[9] = swingset;
+    swingsetObjects[8] = swingset;
     swingset = new imageSwings('./assets/animations/swings/swings-10.png', 50, 50);
+    swingsetObjects[9] = swingset;
 
     for (var i = 0; i < swingsetObjects.length; i++) {
         animation1[i] = swingsetObjects[i].getImage();
