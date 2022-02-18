@@ -18,17 +18,6 @@ function createBorders(thickness) {
     rect(width - 10, 0, 10, height - 100);
 }
 
-function incrementIndex() { // need to increment the s variable
-
-    // increment the index
-    t += 1;
-
-    // if we reach the end of the array, start over
-    if (t >= animation1.length) {
-        t = 0;
-    }
-}
-
 function createTeacher(x, y) {
     teacherX = x;
     teacherY = y;
@@ -65,7 +54,7 @@ function incrementIndex() { // need to increment the s variable
 
     // if we reach the end of the array, start over
     if (s >= animation1.length) {
-        s = 1;
+        s = 0;
     }
 }
 

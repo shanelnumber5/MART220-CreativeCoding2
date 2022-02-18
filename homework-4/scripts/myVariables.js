@@ -150,5 +150,5 @@ var swingset;
 var animation1 = [];
 var swingsetObjects = [];
 var s = 0;
-var t = 0;
-var counter = 11;
+var x = 0;
+var counter = 0;

@@ -2,7 +2,7 @@ function draw() {
     background(grass);
     strokeWeight(5);
 
-    image(animation1[s], 1350, height / 3, swings.width / 8, swings.height / 7);
+        image(animation1[s], 1300, height / 8, 300, 250);
 
     image(playground, 500, height / 4, playground.width / 10, playground.height / 10);
 
