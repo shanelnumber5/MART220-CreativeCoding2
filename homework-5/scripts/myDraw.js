@@ -1,14 +1,23 @@
 function draw() {
     background(grass);
-    strokeWeight(5);
 
-        image(animation1[s], 1300, height / 8, 300, 250);
+    // child
+    image(animation4[h], 13, height / 18, 1350, 1150);
 
-    image(playground, 500, height / 4, playground.width / 10, playground.height / 10);
+    // swings
+    image(animation1[s], 1300, height / 8, 380, 350);
 
-    image(court, 750, height / 2, court.width / 5, court.height / 4);
+    // merry-go-round
+    image(animation3[m], 800, height / 3, 350, 350);
+
+    // basketball court
+    image(animation2[c], 670, height / 2, 1100, 500);
+
+    // playground
+    image(playground, 800, height / 11, playground.width / 12, playground.height / 12);
 
     // timer
+    strokeWeight(5);
     fill(redColor1, greenColor1, blueColor1);
     textSize(80);
 

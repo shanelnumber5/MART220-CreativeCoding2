@@ -1,6 +1,5 @@
 function preload() {
     playground = loadImage('assets/playground.png')
-    court = loadImage('assets/court.png')
     grass = loadImage('assets/grass.jpg')
 
     myFont = loadFont('assets/fonts/Festive-Regular.ttf')
@@ -29,8 +28,195 @@ function preload() {
     swingsetObjects[9] = swingset;
 
     for (var s = 0; s < swingsetObjects.length; s++) {
-        animation1[s] = swingsetObjects[s].getImage();
+        animation1[s] = swingsetObjects[s].getImage1();
 
+    }
+
+    // court
+    court = new imageCourt('assets/animations/court/court-1.png', 0, 0);
+    courtObjects[0] = court;
+    court = new imageCourt('assets/animations/court/court-2.png', 0, 0);
+    courtObjects[1] = court;
+    court = new imageCourt('assets/animations/court/court-3.png', 0, 0);
+    courtObjects[2] = court;
+    court = new imageCourt('assets/animations/court/court-4.png', 0, 0);
+    courtObjects[3] = court;
+    court = new imageCourt('assets/animations/court/court-5.png', 0, 0);
+    courtObjects[4] = court;
+    court = new imageCourt('assets/animations/court/court-6.png', 0, 0);
+    courtObjects[5] = court;
+    court = new imageCourt('assets/animations/court/court-7.png', 0, 0);
+    courtObjects[6] = court;
+    court = new imageCourt('assets/animations/court/court-8.png', 0, 0);
+    courtObjects[7] = court;
+    court = new imageCourt('assets/animations/court/court-9.png', 0, 0);
+    courtObjects[8] = court;
+    court = new imageCourt('assets/animations/court/court-10.png', 10, 10);
+    courtObjects[9] = court;
+    court = new imageCourt('assets/animations/court/court-11.png', 0, 0);
+    courtObjects[10] = court;
+    court = new imageCourt('assets/animations/court/court-12.png', 0, 0);
+    courtObjects[11] = court;
+    court = new imageCourt('assets/animations/court/court-13.png', 0, 0);
+    courtObjects[12] = court;
+    court = new imageCourt('assets/animations/court/court-14.png', 0, 0);
+    courtObjects[13] = court;
+    court = new imageCourt('assets/animations/court/court-15.png', 0, 0);
+    courtObjects[14] = court;
+    court = new imageCourt('assets/animations/court/court-16.png', 0, 0);
+    courtObjects[15] = court;
+    court = new imageCourt('assets/animations/court/court-17.png', 0, 0);
+    courtObjects[16] = court;
+    court = new imageCourt('assets/animations/court/court-18.png', 0, 0);
+    courtObjects[17] = court;
+    court = new imageCourt('assets/animations/court/court-19.png', 0, 0);
+    courtObjects[18] = court;
+    court = new imageCourt('assets/animations/court/court-20.png', 10, 10);
+    courtObjects[19] = court;
+    court = new imageCourt('assets/animations/court/court-21.png', 0, 0);
+    courtObjects[20] = court;
+    court = new imageCourt('assets/animations/court/court-22.png', 0, 0);
+    courtObjects[21] = court;
+    court = new imageCourt('assets/animations/court/court-23.png', 0, 0);
+    courtObjects[22] = court;
+    court = new imageCourt('assets/animations/court/court-24.png', 0, 0);
+    courtObjects[23] = court;
+    court = new imageCourt('assets/animations/court/court-25.png', 0, 0);
+    courtObjects[24] = court;
+    court = new imageCourt('assets/animations/court/court-26.png', 0, 0);
+    courtObjects[25] = court;
+    court = new imageCourt('assets/animations/court/court-27.png', 0, 0);
+    courtObjects[26] = court;
+    court = new imageCourt('assets/animations/court/court-28.png', 0, 0);
+    courtObjects[27] = court;
+    court = new imageCourt('assets/animations/court/court-29.png', 0, 0);
+    courtObjects[28] = court;
+    court = new imageCourt('assets/animations/court/court-30.png', 10, 10);
+    courtObjects[29] = court;
+    court = new imageCourt('assets/animations/court/court-31.png', 0, 0);
+    courtObjects[30] = court;
+    court = new imageCourt('assets/animations/court/court-32.png', 0, 0);
+    courtObjects[31] = court;
+    court = new imageCourt('assets/animations/court/court-33.png', 0, 0);
+    courtObjects[32] = court;
+    court = new imageCourt('assets/animations/court/court-34.png', 0, 0);
+    courtObjects[33] = court;
+    court = new imageCourt('assets/animations/court/court-35.png', 0, 0);
+    courtObjects[34] = court;
+    court = new imageCourt('assets/animations/court/court-36.png', 0, 0);
+    courtObjects[35] = court;
+    court = new imageCourt('assets/animations/court/court-37.png', 0, 0);
+    courtObjects[36] = court;
+    court = new imageCourt('assets/animations/court/court-38.png', 0, 0);
+    courtObjects[37] = court;
+    court = new imageCourt('assets/animations/court/court-39.png', 0, 0);
+    courtObjects[38] = court;
+    court = new imageCourt('assets/animations/court/court-40.png', 10, 10);
+    courtObjects[39] = court;
+    ('assets/animations/court/court-41.png', 10, 10);
+    courtObjects[40] = court;
+
+    for (var c = 0; c < courtObjects.length; c++) {
+        animation2[c] = courtObjects[c].getImage2();
+    }
+
+    // merry-go-round
+    merry = new imageMerry('assets/animations/merry/merry-1.png', 0, 0);
+    merryObjects[0] = merry;
+    merry = new imageMerry('assets/animations/merry/merry-2.png', 0, 0);
+    merryObjects[1] = merry;
+
+    for (var m = 0; m < merryObjects.length; m++) {
+        animation3[m] = merryObjects[m].getImage3();
+
+    }
+
+    // child
+    child = new imageChild('assets/animations/child/child-1.png', 0, 0);
+    childObjects[0] = child;
+    child = new imageChild('assets/animations/child/child-2.png', 0, 0);
+    childObjects[1] = child;
+    child = new imageChild('assets/animations/child/child-3.png', 0, 0);
+    childObjects[2] = child;
+    child = new imageChild('assets/animations/child/child-4.png', 0, 0);
+    childObjects[3] = child;
+    child = new imageChild('assets/animations/child/child-5.png', 0, 0);
+    childObjects[4] = child;
+    child = new imageChild('assets/animations/child/child-6.png', 0, 0);
+    childObjects[5] = child;
+    child = new imageChild('assets/animations/child/child-7.png', 0, 0);
+    childObjects[6] = child;
+    child = new imageChild('assets/animations/child/child-8.png', 0, 0);
+    childObjects[7] = child;
+    child = new imageChild('assets/animations/child/child-9.png', 0, 0);
+    childObjects[8] = child;
+    child = new imageChild('assets/animations/child/child-10.png', 10, 10);
+    childObjects[9] = child;
+    child = new imageChild('assets/animations/child/child-11.png', 0, 0);
+    childObjects[10] = child;
+    child = new imageChild('assets/animations/child/child-12.png', 0, 0);
+    childObjects[11] = child;
+    child = new imageChild('assets/animations/child/child-13.png', 0, 0);
+    childObjects[12] = child;
+    child = new imageChild('assets/animations/child/child-14.png', 0, 0);
+    childObjects[13] = child;
+    child = new imageChild('assets/animations/child/child-15.png', 0, 0);
+    childObjects[14] = child;
+    child = new imageChild('assets/animations/child/child-16.png', 0, 0);
+    childObjects[15] = child;
+    child = new imageChild('assets/animations/child/child-17.png', 0, 0);
+    childObjects[16] = child;
+    child = new imageChild('assets/animations/child/child-18.png', 0, 0);
+    childObjects[17] = child;
+    child = new imageChild('assets/animations/child/child-19.png', 0, 0);
+    childObjects[18] = child;
+    child = new imageChild('assets/animations/child/child-20.png', 10, 10);
+    childObjects[19] = child;
+    child = new imageChild('assets/animations/child/child-21.png', 0, 0);
+    childObjects[20] = child;
+    child = new imageChild('assets/animations/child/child-22.png', 0, 0);
+    childObjects[21] = child;
+    child = new imageChild('assets/animations/child/child-23.png', 0, 0);
+    childObjects[22] = child;
+    child = new imageChild('assets/animations/child/child-24.png', 0, 0);
+    childObjects[23] = child;
+    child = new imageChild('assets/animations/child/child-25.png', 0, 0);
+    childObjects[24] = child;
+    child = new imageChild('assets/animations/child/child-26.png', 0, 0);
+    childObjects[25] = child;
+    child = new imageChild('assets/animations/child/child-27.png', 0, 0);
+    childObjects[26] = child;
+    child = new imageChild('assets/animations/child/child-28.png', 0, 0);
+    childObjects[27] = child;
+    child = new imageChild('assets/animations/child/child-29.png', 0, 0);
+    childObjects[28] = child;
+    child = new imageChild('assets/animations/child/child-30.png', 10, 10);
+    childObjects[29] = child;
+    child = new imageChild('assets/animations/child/child-31.png', 0, 0);
+    childObjects[30] = child;
+    child = new imageChild('assets/animations/child/child-32.png', 0, 0);
+    childObjects[31] = child;
+    child = new imageChild('assets/animations/child/child-33.png', 0, 0);
+    childObjects[32] = child;
+    child = new imageChild('assets/animations/child/child-34.png', 0, 0);
+    childObjects[33] = child;
+    child = new imageChild('assets/animations/child/child-35.png', 0, 0);
+    childObjects[34] = child;
+    child = new imageChild('assets/animations/child/child-36.png', 0, 0);
+    childObjects[35] = child;
+    child = new imageChild('assets/animations/child/child-37.png', 0, 0);
+    childObjects[36] = child;
+    child = new imageChild('assets/animations/child/child-38.png', 0, 0);
+    childObjects[37] = child;
+    child = new imageChild('assets/animations/child/child-39.png', 0, 0);
+    childObjects[38] = child;
+    child = new imageChild('assets/animations/child/child-40.png', 10, 10);
+    childObjects[39] = child;
+    ('assets/animations/child/child-41.png', 10, 10);
+    childObjects[40] = child;
+
+    for (var h = 0; h < childObjects.length; h++) {
+        animation4[h] = childObjects[h].getImage4();
     }
 }
 
@@ -43,7 +229,10 @@ function setup() {
     // timer
     textAlign(CENTER);
     setInterval(timeIt, 1000);
-    setInterval(incrementIndex, 100);
+    setInterval(incrementIndex1, 100);
+    setInterval(incrementIndex2, 100);
+    setInterval(incrementIndex3, 175);
+    setInterval(incrementIndex4, 80);
 
     // back button
     button = createButton("Back");

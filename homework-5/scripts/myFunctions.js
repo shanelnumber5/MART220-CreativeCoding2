@@ -47,14 +47,31 @@ function teacherMovement() {
     }
 }
 
-function incrementIndex() { // need to increment the s variable
-
-    // increment the index
+function incrementIndex1() {
     s += 1;
-
-    // if we reach the end of the array, start over
     if (s >= animation1.length) {
         s = 0;
+    }
+}
+
+function incrementIndex2() {
+    c += 1;
+    if (c >= animation2.length) {
+        c = 0;
+    }
+}
+
+function incrementIndex3() {
+    m += 1;
+    if (m >= animation3.length) {
+        m = 0;
+    }
+}
+
+function incrementIndex4() {
+    h += 1;
+    if (h >= animation4.length) {
+        h = 0;
     }
 }
 

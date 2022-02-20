@@ -134,7 +134,6 @@ var redColor13, greenColor13, blueColor13;
 
 // decorative images
 let playground;
-let court;
 let grass;
 
 // fonts
@@ -150,5 +149,29 @@ var swingset;
 var animation1 = [];
 var swingsetObjects = [];
 var s = 0;
-var x = 0;
+var swingX = 0;
 var counter = 0;
+
+// court
+var court;
+var animation2 = [];
+var courtObjects = [];
+var c = 0;
+var courtX = 0;
+var counter2 = 0;
+
+// merry-go-round
+var merry;
+var animation3 = [];
+var merryObjects = [];
+var m = 0;
+var merryX = 0;
+var counter3 = 0;
+
+// merry-go-round
+var child;
+var animation4 = [];
+var childObjects = [];
+var h = 0;
+var childX = 0;
+var counter4 = 0;
