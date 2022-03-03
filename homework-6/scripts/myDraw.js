@@ -5,19 +5,15 @@ function draw() {
     image(playground, 800, height / 11, playground.width / 12, playground.height / 12);
 
     // child
-    console.log(childObjects.length)
     image(childObjects[h].getImage(), 13, height / 18, 1350, 1150);
 
     // swings
-    console.log(swingsetObjects.length)
     image(swingsetObjects[s].getImage(), 1300, height / 8, 380, 350);
 
     // basketball court
-    console.log(courtObjects.length)
     image(courtObjects[c].getImage(), 670, height / 2, 1100, 500);
 
     // merry-go-round
-    console.log(merryObjects.length)
     image(merryObjects[m].getImage(), 800, height / 3, 350, 350);
 
     // timer

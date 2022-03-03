@@ -41,25 +41,25 @@ var timerValue = 0,
     startButton;
 
 // swings
-var swings, 
-swingsetObjects = [],
-s = 0,
-counter = 0;
+var swings,
+    swingsetObjects = [],
+    s = 0,
+    counter = 0;
 
 // court
 var court,
-courtObjects = [],
-c = 0,
-counter2 = 0;
+    courtObjects = [],
+    c = 0,
+    counter2 = 0;
 
 // merry-go-round
 var merry,
-merryObjects = [],
-m = 0,
-counter3 = 0;
+    merryObjects = [],
+    m = 0,
+    counter3 = 0;
 
 // merry-go-round
 var child,
-childObjects = [],
-h = 0,
-counter4 = 0;
+    childObjects = [],
+    h = 0,
+    counter4 = 0;
