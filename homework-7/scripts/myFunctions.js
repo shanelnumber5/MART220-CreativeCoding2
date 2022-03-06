@@ -17,8 +17,6 @@ function createBorders(thickness) {
     rect(0, height - 20, width, thickness);
     // left border
     rect(0, 0, 10, height);
-    // right upper border
-    rect(width - 10, 0, 10, height - 100);
 }
 
 // create teacher
@@ -31,24 +29,23 @@ function createTeacher(x, y) {
 function drawTeacher() {
     fill(redColor4, greenColor4, blueColor4);
     stroke(1);
-    rect(teacherX, teacherY, 50, 50);
+    rect(teacherX, teacherY, teacherWidth, teacherHeight);
 }
 
 // teacher movement
 function teacherMovement() {
     // handle the keys
     if (keyIsDown(UP_ARROW)) {
-        teacherY -= 10;
+        teacherY -= move;
     }
     if (keyIsDown(DOWN_ARROW)) {
-        teacherY += 10;
+        teacherY += move;
     }
     if (keyIsDown(LEFT_ARROW)) {
-        teacherX -= 10;
-        console.log("movement: " + teacherX);
+        teacherX -= move;
     }
     if (keyIsDown(RIGHT_ARROW)) {
-        teacherX += 10;
+        teacherX += move;
     }
 }
 
@@ -76,13 +73,13 @@ function incrementIndex3() {
     }
 }
 
-// large shild speed
+/* // large child speed
 function incrementIndex4() {
     h += 1;
     if (h >= childObjects.length) {
         h = 0;
     }
-}
+} */
 
 // student sizes
 function getRandomNumber(number) {

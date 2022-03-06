@@ -1,6 +1,9 @@
 // x and y for the teacher
 var teacherX = 0,
-    teacherY = 100;
+    teacherY = 0,
+    teacherWidth = 50,
+    teacherHeight = 50,
+    move = 5;
 
 // defined key codes for each letter
 // teacher movement
@@ -32,6 +35,10 @@ var redColor4, greenColor4, blueColor4;
 let playground;
 let grass;
 
+// random rock obstacles
+var rocks,
+    rock
+
 // fonts
 let myFont;
 let myFont2;
@@ -58,13 +65,23 @@ var merry,
     m = 0,
     counter3 = 0;
 
-// child
+/* child
 var child,
     childObjects = [],
     h = 0,
-    counter4 = 0;
+    counter4 = 0; */
 
 // creating animations from sprite sheets
-var sprite_sheet_image;
-var sprite_sheet;
-var explode_animation;
+var sprite_sheet_image,
+    sprite_sheet,
+    confused_child;
+
+/* var sprite_sheet_image2,
+    sprite_sheet2,
+    excited_child; */
+
+// playground fencing creates obstacle for teacher
+
+// right fence
+var fenceY = 0,
+    fenceWidth = 10;
