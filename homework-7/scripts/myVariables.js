@@ -37,7 +37,7 @@ let grass;
 
 // random rock obstacles
 var rocks,
-    rock
+    rock;
 
 // fonts
 let myFont;

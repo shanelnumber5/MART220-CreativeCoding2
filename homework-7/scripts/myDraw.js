@@ -8,7 +8,8 @@ function draw() {
      image(childObjects[h].getImage(), 13, height / 18, 1350, 1150); */
 
     // rock obstacles
-    image(rock, rock2, 100, 100);
+    //image(rock, 100, 100);
+    //image(rock2, 200, 200);
 
     drawSprites();
 

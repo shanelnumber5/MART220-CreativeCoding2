@@ -45,7 +45,7 @@ function setup() {
     // create rocks
     rocks = new Group();
     for (var i = 0; i < 2; i++) {
-        var rock = createSprite(random(0, width), random(0, height - 100));
+        var rock = createSprite(random(0, width), random(0, height - 150));
         rock.addAnimation("assets/rock.png", "assets/rock2.png");
         rocks.add(rock);
     }
