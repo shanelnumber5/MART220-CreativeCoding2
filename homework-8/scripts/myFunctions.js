@@ -21,24 +21,31 @@ function collect(collector, collected) {
     //the event
     collected.remove();
 }
-/*function bumpresult(collector, collected)
-{
-  //collector is another name for    {
-        if(dist(teacher.position.x,teacher.position.y,cough.position.x,cough.position.y) < 250)
-        {;
-  createParticles(cough.position.x, cough.position.y);
-  health -= 1;
-  if(health <= 0)
-  {
-  cough.remove();
-  cough = null;
-}
 
-//scoreboard
-function scoreboard(){
-    if(collected.remove){
-        score == score + 1;
-}
+function createParticles(x, y) {
+    y.changeAnimation('bumpresult');
+    x.animation.rewind();
+    bumpresult.remove();
 
+    for (let i = 0; i < 5; i++) {
+        let p = new Particle(x, y);
+        particles.push(p);
+    }
+    for (let i = particles.length - 1; i >= 0; i--) {
+        particles[i].update();
+        particles[i].show();
+        if (particles[i].finished()) {
+            // remove this particle
+            particles.splice(i, 1);
+        }
+    }
+
+
+    /*//scoreboard
+    function scoreboard(){
+        if(collected.remove){
+            score == score + 1;
+    }
+
+    }*/
 }
-}*/

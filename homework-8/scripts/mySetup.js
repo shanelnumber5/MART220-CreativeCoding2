@@ -1,6 +1,19 @@
 function preload() {
     grass = loadImage('assets/grass.jpg');
 
+    //swings
+    for (var i = 0; i < 1; i++) {
+        var swings = createSprite(1300, 400);
+        swings.addAnimation('normal', 'assets/animations/swings/swings-1.png', 'assets/animations/swings/swings-10.png');
+    }
+
+    //create a user controlled sprite
+    teacher = createSprite(random(0, width + 40), random(0, height + 40));
+    teacher.addAnimation('bumpresult', 'assets/teacher/happy.png', 'assets/teacher/happy6.png', 'assets/teacher/sad.png', 'assets/teacher/sad6.png');
+
+    teacher.addAnimation('happy', 'assets/teacher/normal.png', 'assets/teacher/normal6.png', 'assets/teacher/happy.png', 'assets/teacher/happy6.png');
+
+    teacher.addAnimation('sad', 'assets/teacher/normal.png', 'assets/teacher/normal6.png', 'assets/teacher/sad.png', 'assets/teacher/sad6.png');
 
     //special font types
     myFont = loadFont('assets/fonts/Festive-Regular.ttf');
@@ -10,21 +23,17 @@ function preload() {
 function setup() {
     createCanvas(displayWidth - 150, displayHeight - 140);
 
-    //coughing child
-    cough = createSprite(1200, 900);
-    cough.addImage(loadImage('assets/child.png'));
-
-    //create a user controlled sprite
-    teacher = createSprite(random(0, width + 40), random(0, height + 40));
-    teacher.addAnimation('happy', 'assets/happy.png');
-
-    teacher.addAnimation('sad', 'assets/sad.png');
-
-    teacher.addAnimation('normal', 'assets/normal.png');
-
-    //create 2 groups
+    //create 3 groups
     obstacles = new Group();
     collectibles = new Group();
+    bumpresult = new Group();
+
+    //coughing child
+    for (var i = 0; i < 1; i++) {
+        var germs = createSprite(1200, 900);
+        germs.addAnimation('normal', 'assets/child.png');
+        bumpresult.add(germs);
+    }
 
     //upper fence
     for (var i = 0; i < 1; i++) {
@@ -67,12 +76,6 @@ function setup() {
         obstacles.add(rock2);
     }
 
-    //swings
-    for (var i = 0; i < 1; i++) {
-        var swings = createSprite(1300, height / 8);
-        swings.addAnimation('normal', 'assets/animations/swings/swings-1.png', 'assets/animations/swings/swings-10.png');
-    }
-
     //slide
     for (var i = 0; i < 1; i++) {
         var slide = createSprite(230, 600);
@@ -85,11 +88,65 @@ function setup() {
         students.addAnimation('normal', 'assets/children/child1.png');
         collectibles.add(students);
     }
-   
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child2.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child3.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child4.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child5.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child6.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child7.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child8.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child9.png');
+        collectibles.add(students);
+    }
+
+    for (var j = 0; j <= 0; j++) {
+        var students = createSprite(random(0, width + 40), random(0, height + 40));
+        students.addAnimation('normal', 'assets/children/child10.png');
+        collectibles.add(students);
+    }
+
     //timer
     textAlign(CENTER);
     setInterval(timeIt, 1000);
-   
+
     //back button
     button = createButton("Back");
     button.size(200, 100);

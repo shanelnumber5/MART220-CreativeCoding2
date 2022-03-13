@@ -1,5 +1,6 @@
 //game play items
 var obstacles,
+    bumpresult,
     collectibles;
 
 //teacher
@@ -30,5 +31,4 @@ const particles = [];
 
 //coughing child 
 var cough,
-    bumpresult,
     health = 100;
