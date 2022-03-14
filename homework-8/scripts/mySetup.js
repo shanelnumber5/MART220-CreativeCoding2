@@ -31,115 +31,115 @@ function setup() {
     //coughing child
     for (var i = 0; i < 1; i++) {
         var germs = createSprite(1200, 900);
-        germs.addAnimation('normal', 'assets/child.png');
+        germs.addAnimation('bumpresult', 'assets/child.png');
         bumpresult.add(germs);
     }
 
     //upper fence
     for (var i = 0; i < 1; i++) {
         var fence1 = createSprite(width, -70);
-        fence1.addAnimation('normal', 'assets/fence.png');
+        fence1.addAnimation('sad', 'assets/fence.png');
         obstacles.add(fence1);
     }
 
     //lower fence
     for (var i = 0; i < 1; i++) {
         var fence2 = createSprite(width / 2, height / 2 + 470);
-        fence2.addAnimation('normal', 'assets/fence2.png');
+        fence2.addAnimation('sad', 'assets/fence2.png');
         obstacles.add(fence2);
     }
 
     //left fence
     for (var i = 0; i < 1; i++) {
         var fence3 = createSprite(-20, height);
-        fence3.addAnimation('normal', 'assets/fence3.png');
+        fence3.addAnimation('sad', 'assets/fence3.png');
         obstacles.add(fence3);
     }
 
     //left fence
     for (var i = 0; i < 1; i++) {
         var fence3 = createSprite(width + 20, height);
-        fence3.addAnimation('normal', 'assets/fence3.png');
+        fence3.addAnimation('sad', 'assets/fence3.png');
         obstacles.add(fence3);
     }
 
     //rocks
     for (var i = 0; i < 2; i++) {
         var rocks = createSprite(random(0, width + 40), random(0, height + 40));
-        rocks.addAnimation('normal', 'assets/rock.png');
+        rocks.addAnimation('sad', 'assets/rock.png');
         obstacles.add(rocks);
     }
 
     for (var i = 0; i < 1; i++) {
         var rock2 = createSprite(random(0, width + 40), random(0, height + 40));
-        rock2.addAnimation('normal', 'assets/rock2.png');
+        rock2.addAnimation('sad', 'assets/rock2.png');
         obstacles.add(rock2);
     }
 
     //slide
     for (var i = 0; i < 1; i++) {
         var slide = createSprite(230, 600);
-        slide.addAnimation('normal', 'assets/animations/slide/1.png', 'assets/animations/slide/351.png');
+        slide.addAnimation('sad', 'assets/animations/slide/1.png', 'assets/animations/slide/351.png');
     }
 
     //students
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child1.png');
+        students.addAnimation('happy', 'assets/children/child1.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child2.png');
+        students.addAnimation('happy', 'assets/children/child2.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child3.png');
+        students.addAnimation('happy', 'assets/children/child3.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child4.png');
+        students.addAnimation('happy', 'assets/children/child4.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child5.png');
+        students.addAnimation('happy', 'assets/children/child5.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child6.png');
+        students.addAnimation('happy', 'assets/children/child6.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child7.png');
+        students.addAnimation('happy', 'assets/children/child7.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child8.png');
+        students.addAnimation('happy', 'assets/children/child8.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child9.png');
+        students.addAnimation('happy', 'assets/children/child9.png');
         collectibles.add(students);
     }
 
     for (var j = 0; j <= 0; j++) {
         var students = createSprite(random(0, width + 40), random(0, height + 40));
-        students.addAnimation('normal', 'assets/children/child10.png');
+        students.addAnimation('happy', 'assets/children/child10.png');
         collectibles.add(students);
     }
 
