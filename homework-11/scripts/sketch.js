@@ -27,7 +27,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(0);
   image(buffalo, -1100, -550, 1075, 850);
   texture(skin);
 
