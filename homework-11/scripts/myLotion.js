@@ -1,7 +1,6 @@
-class myLotion{
+class myLotion {
 
-    constructor(radius, height, detailX, detailY, locationX, locationY)
-    {
+    constructor(radius, height, detailX, detailY, locationX, locationY) {
         this.radius = radius;
         this.height = height;
         this.detailX = detailX;
@@ -10,18 +9,15 @@ class myLotion{
         this.locationY = locationY;
     }
 
-    show()
-    {
+    show() {
         cylinder(this.radius, this.height, this.detailX, this.detailY);
     }
 
-    translateCylinder()
-    {
-        translate(this.locationX,this.locationY);
+    translateCylinder() {
+        translate(this.locationX, this.locationY);
     }
 
-    rotateCylinder(amount)
-    {
+    rotateCylinder(amount) {
         rotateX(amount);
         rotateY(amount);
     }
